@@ -23,4 +23,4 @@ jobs:
       run: docker build -t ci_cd_test .
 
     - name: Run the Docker image
-      run: docker run -p 8005:8000 ci_cd_test
+      run: docker run --rm -p 8005:8000 ci_cd_test pytest -s -v
