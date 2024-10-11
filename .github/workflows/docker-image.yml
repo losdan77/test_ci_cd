@@ -19,5 +19,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Test the Docker image
-      run: pytest
+    - name: Build the Docker image
+      run: docker build -t ci_cd_test .
+
+    - name: Run the Docker image
+      run: docker run -p 8005:8000 ci_cd_test
