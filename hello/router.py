@@ -5,6 +5,6 @@ router = APIRouter(
     tags=['Основа']
 )
 
-@router.post('/hello')
+@router.get('/hello')
 async def hello_world():
     return 'hello wrld'
